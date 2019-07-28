@@ -1,0 +1,14 @@
+{
+  "name": "ionic4-facebook-login",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/public",
+      "proxyUrl": "http://demo.dinsnatural.com/"
+    }
+  ],
+  "proxy": "http://demo.dinsnatural.com/"
+}

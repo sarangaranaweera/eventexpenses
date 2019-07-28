@@ -1,0 +1,80 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <button ion-button (click)="toggleMenu()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Title
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+    <ion-grid>
+    
+     <ion-row>
+     <ion-col size="3"></ion-col>	
+     <ion-col size="6" class="logo">
+       <img src="assets/images/logo.png" width="80%" alt="placeholder+image">
+     </ion-col>
+     <ion-col size="3"></ion-col>
+     </ion-row>	
+    
+    <ion-row>
+    <ion-col></ion-col>
+    <ion-col size="10" class="login-block">
+        Email
+        <input type="text" [(ngModel)]="userEmail">	
+    </ion-col>
+    <ion-col></ion-col>
+    </ion-row>
+    
+    <ion-row>
+    <ion-col></ion-col>
+    <ion-col size="10" class="login-block">
+        Password
+        <input type="password" [(ngModel)]="userPassword">
+    </ion-col>
+    <ion-col></ion-col>
+    </ion-row>
+    
+    <ion-row>
+    <ion-col></ion-col>
+    <ion-col size="10" class="login-block">
+      <button ion-button full color="#fd6700" (click)="doDefaultLogin(userEmail,userPassword)">Login</button>		
+    </ion-col>
+    
+    <ion-col></ion-col>
+    </ion-row>
+    
+    
+    <ion-row>
+    <ion-col size="12" class="login-footer">
+    <span [routerLink]="['/register']">Register</span> &nbsp; &nbsp; &nbsp; Forgot password	
+    </ion-col>	
+    </ion-row>	
+    
+    <ion-row>
+    <ion-col size="12" class="login-footer">
+    Login with <span style="color:blue" (click)="doFbLogin($event)">Facebook</span>	
+    </ion-col>	
+    </ion-row>
+    
+    
+    </ion-grid>	
+    
+    </ion-content>
+
+
+<!-- <ion-router-outlet main></ion-router-outlet>
+<ion-content class="login-content" padding >
+  <ion-row>
+    <ion-col>
+      <ion-button class="log-in-button" color="primary" expand="block" (click)="doFbLogin()">
+        LOG IN WITH FACEBOOK
+      </ion-button>
+       <ion-button href="/list">Go to members page</ion-button> 
+    </ion-col>
+  </ion-row>
+</ion-content> -->

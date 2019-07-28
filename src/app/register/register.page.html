@@ -1,0 +1,98 @@
+<ion-header>
+	<ion-toolbar>
+	  <ion-buttons slot="start">
+		<ion-back-button color="energized"></ion-back-button>
+	  </ion-buttons>
+	  <ion-row>	
+		<ion-col size="12">
+		<h2>Register</h2>	
+		</ion-col>	
+		</ion-row>	
+	</ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+
+<ion-grid>
+
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<ion-row>
+<ion-col></ion-col>	
+<ion-col size="3">
+<img src="assets/images/camera.png" width="100%" alt="placeholder+image">	
+<!-- <input type="file"> -->
+</ion-col>
+<ion-col size="7" class="login-block">
+    name
+	<input type="text" formControlName="name">
+	<div *ngIf="submitted && registerForm.controls.name.errors" class="error">
+			<div style="color:red" *ngIf="registerForm.controls.name.errors.required">A name is required</div>
+	</div>	
+</ion-col>	
+<ion-col></ion-col>
+</ion-row>	
+
+<ion-row>
+	<ion-col></ion-col>
+	<ion-col size="10" class="login-block">
+		Image
+		<input type="file" (change)="onFileSelected($event)">
+	</ion-col>
+</ion-row>
+
+
+
+<ion-row>
+<ion-col></ion-col>
+<ion-col size="10" class="login-block">
+    Email
+	<input type="text" formControlName="email">
+	<div *ngIf="submitted && registerForm.controls.email.errors" class="error">
+			<div style="color:red" *ngIf="registerForm.controls.email.errors.required">An email is required</div>
+			<div style="color:red" *ngIf="registerForm.controls.email.errors.email">Invalid email address</div>	
+	</div>		
+</ion-col>
+<ion-col></ion-col>	
+</ion-row>	
+
+<ion-row>
+<ion-col></ion-col>
+<ion-col size="10" class="login-block">
+    Password
+	<input type="password" formControlName="password">	
+	<div *ngIf="submitted && registerForm.controls.password.errors" class="error">
+			<div style="color:red" *ngIf="registerForm.controls.password.errors.required">A password is required</div>
+			<div style="color:red" *ngIf="registerForm.controls.password.errors.minlength">Password must be at least 6 characters</div>
+	</div>	
+</ion-col>
+<ion-col></ion-col>	
+</ion-row>
+
+<ion-row>
+<ion-col></ion-col>
+<ion-col size="10" class="login-block">
+    Re-enter password
+	<input type="password" formControlName="confirmPassword">
+	<div *ngIf="submitted && registerForm.controls.confirmPassword.errors" class="error">
+			<div style="color:red" *ngIf="registerForm.controls.confirmPassword.errors.required">Confirm Password is required</div>
+	        <div style="color:red" *ngIf="registerForm.controls.confirmPassword.errors.mustMatch">Passwords must match</div>
+	</div>	
+		
+</ion-col>
+<ion-col></ion-col>	
+</ion-row>
+
+<ion-row>
+<ion-col></ion-col>
+<ion-col size="10" class="login-block">
+		<input type="submit" value="Register" class="cta">
+    <!-- <button button-native ion-button full color="#fd6700">Register</button>	 -->
+</ion-col>
+<ion-col></ion-col>
+</ion-row>
+</form>
+</ion-grid>	
+
+</ion-content>

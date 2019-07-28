@@ -1,0 +1,89 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+</ion-content> -->
+
+<ion-header>
+    <!-- <ion-toolbar>
+      <ion-title>
+        Ionic Blank
+      </ion-title>
+    </ion-toolbar> -->
+  
+  <ion-row class="home-header">
+  <ion-col size="1"><img src="assets/images/menu.png" width="80%" alt="placeholder+image"></ion-col>
+  <ion-col size="10"><img src="assets/images/top_logo.png" width="" height="30px" alt="placeholder+image"></ion-col>
+  <ion-col size="1"><img src="assets/images/messages.png" width="80%" alt="placeholder+image"></ion-col>  
+  </ion-row>  
+  
+  </ion-header>
+  
+  <ion-content>
+    <!-- <div class="ion-padding">
+      The world is your oyster.
+      <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    </div> -->
+  
+    <ion-row class="home-block" [routerLink]="['/expenses']">
+    <ion-col size="3">
+    <img src="assets/images/expenses.png" width="60%" alt="placeholder+image">
+    </ion-col>  
+    <ion-col size="9">
+      <h4>Expenses</h4>
+    </ion-col> 
+    </ion-row>  
+  
+    <ion-row class="home-block" [routerLink]="['/event_summary']">
+    <ion-col size="3">
+    <img src="assets/images/event_summery.png" width="60%" alt="placeholder+image">
+    </ion-col>  
+    <ion-col size="9">
+      <h4>Event Summery</h4>
+    </ion-col> 
+    </ion-row>
+  
+    <ion-row class="home-block" [routerLink]="['/members']">
+    
+    <ion-col size="3" >
+    <img src="assets/images/members.png" width="60%" alt="placeholder+image">
+    </ion-col>  
+   
+    <ion-col size="9">
+      <h4>Members</h4>
+    </ion-col> 
+   
+    </ion-row>
+    
+    <ion-row class="home-block" [routerLink]="['/messages']">
+    <ion-col size="3">
+    <img src="assets/images/chat.png" width="60%" alt="placeholder+image">
+    </ion-col>  
+    <ion-col size="9">
+      <h4>Chat</h4>
+    </ion-col> 
+    </ion-row>
+  
+    <ion-row class="home-block" [routerLink]="['/payback-facility']">
+    <ion-col size="3">
+    <img src="assets/images/pay_back.png" width="60%" alt="placeholder+image">
+    </ion-col>  
+    <ion-col size="9">
+      <h4>Payback Facility</h4>
+    </ion-col> 
+    </ion-row>
+  
+    <!-- <ion-row class="home-block">
+    <ion-col size="3">
+    <img src="assets/images/msg.png" width="60%" alt="placeholder+image">
+    </ion-col>  
+    <ion-col size="9">
+      <h4>Messages</h4>
+    </ion-col> 
+    </ion-row> -->
+  
+  </ion-content>

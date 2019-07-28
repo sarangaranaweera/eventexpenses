@@ -1,0 +1,8 @@
+
+{
+    "/public/*": {
+        "target": "http://demo.dinsnatural.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
