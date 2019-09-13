@@ -3,7 +3,9 @@ import { Facebook } from '@ionic-native/facebook/ngx';
 import { Router } from '@angular/router';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { LoadingController, AlertController, Platform } from '@ionic/angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MenuController } from '@ionic/angular'; 
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +15,7 @@ import { MenuController } from '@ionic/angular';
 export class LoginPage {
 
   FB_APP_ID: number = 812746379118791;
+  registerForm: FormGroup;
 
   constructor(
     private fb: Facebook,
@@ -21,7 +24,8 @@ export class LoginPage {
     private router: Router,
     private platform: Platform,
     public alertController: AlertController,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    private data: DataService
   ) { }
 
   async doFbLogin(){
@@ -51,6 +55,12 @@ export class LoginPage {
           picture: user.picture
         })
         .then(() => {
+          const formData = new FormData();
+          formData.append('name', user.name);
+          formData.append('email', user.email);
+          formData.append('password', '123456');
+          formData.append('image', user.picture);
+          this.data.setUser(formData);
           this.router.navigate(["/home"]);
           loading.dismiss();
         }, error => {

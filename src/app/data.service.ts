@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 
 
 export class DataService {
-  
 
   constructor(
     private http: HttpClient,
@@ -32,4 +31,13 @@ export class DataService {
     );
 
   }
+
+  setEvent(formData) {
+
+  }
+
+  getEvents() {
+
+  }
+  
 }
